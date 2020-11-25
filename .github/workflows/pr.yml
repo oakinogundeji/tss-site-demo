@@ -1,0 +1,15 @@
+name: master-CI
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  test:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: main
+
+    # say hello world
+    - name: say hello world
+      run: echo "hello world!"

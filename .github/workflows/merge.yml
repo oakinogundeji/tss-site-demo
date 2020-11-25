@@ -1,0 +1,33 @@
+name: master-CD
+on:
+  push:
+    branches: [ main ]
+
+# define env vars for use by this job
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+  AWS_DEFAULT_OUTPUT: ${{ secrets.AWS_DEFAULT_OUTPUT }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+
+    - name: checkout code
+      uses: actions/checkout@v2
+      with:
+        ref: main   
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+    - name: Copy files to the S3 Bucket with the AWS CLI
+      run: |
+        aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }}
+
