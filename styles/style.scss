@@ -1,0 +1,2889 @@
+@import './fonts.scss';
+@import '././variables.scss';
+  
+body, html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;   
+    overflow-x: hidden;
+}
+
+.btn {
+    transition: background 0.5s ease-in-out;
+}
+
+.btn:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px #e5e6e8;
+    color: #b74579 !important;
+}
+
+.banner-wrapper {
+    background-image: url(../images/website/bg.png);
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width: $small-screen) {
+        background-image: url(../images/website/bg-sm.png);
+    }
+}
+
+.banner {
+    // opacity: 0.2;
+    background-image: linear-gradient(50deg, transparent , rgba(0, 0, 0, 1));
+    height: 100vh;
+    padding: 70px 120px;
+    width: 100vw;
+
+    @media screen and (max-width: $large-screen) {
+        height: 100vh;
+        padding: 50px 50px; 
+    }
+
+    @media screen and (max-width: $medium-screen) {
+        height: 100vh;
+        padding: 50px 50px; 
+    }
+
+    @media screen and (max-width: $small-screen) {
+       height: 90vh;
+       padding: 30px 30px; 
+    }
+
+    @media screen and (max-width: $small-mid-screen) {
+        height: 85vh;
+        padding: 30px 30px; 
+    }
+
+    @media screen and (max-width: 388px) {
+        height: 90vh;
+    }
+
+    @media screen and (max-width: $smallest-screen) {
+        height: 92vh;
+        padding: 30px 30px; 
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-top: 120px;  
+      font-size: 35px;
+      font-weight: 900;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;  
+      color: #ffffff; 
+      font-family: Mont-DEMO;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: 27px;
+            margin-top: 70px; 
+        }            
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: 23px;
+            margin-top: 65px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 16.5px;
+            margin-top: 65px;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            font-size: 16px;
+        }
+    }
+
+    h5  {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        opacity: 0.5;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: 17px;
+            margin-top: 14px; 
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: 16px;
+            margin-top: 12.5px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            font-size: 11.8px;
+        }
+    }
+
+//     #slideshow {
+//         margin: 0 auto;
+//         width: 50%;
+//         margin-top: 40px;
+
+//         @media screen and (max-width: $small-screen) {
+//             width: 65%;
+//             margin-top: 25px;
+//         }
+
+//         @media screen and (max-width: $small-mid-screen) {
+//             width: 65%;
+//             margin-top: 35px;
+//         }
+
+//         @media screen and (max-width: 360px) {
+//             margin-top: 40px;
+//         }
+
+//         img {
+//             margin: 0 auto;
+//             width: 70px;
+
+//             @media screen and (max-width: $large-screen) {
+//                 width: 58px;
+//                 height: 58px;
+//             }
+
+//             @media screen and (max-width: $medium-screen) {
+//                 width: 50px;
+//                 height: 50px;
+//             }
+
+//             @media screen and (max-width: $small-screen) {
+//                 width: 42px;
+//                 height: 42px;
+//             }
+//         }
+
+//         .row {
+//             p {
+//                 font-family: Poppins;
+//                 font-size: 15px;
+//                 font-weight: 900;
+//                 font-style: normal;
+//                 font-stretch: normal;
+//                 line-height: normal;
+//                 letter-spacing: normal;
+//                 color: #b74579;
+//                 margin-top: 20px;
+
+//                 @media screen and (max-width: $large-screen) {
+//                     font-size: 13px;
+//                     font-weight: 900;
+//                 }
+
+//                 @media screen and (max-width: $medium-screen) {
+//                     font-size: 13px;
+//                     font-weight: 900;
+//                 }
+
+//                 @media screen and (max-width: $small-screen) {
+//                     font-size: 10px;
+//                     font-weight: 900;
+//                 }
+//             }
+//         }
+
+//         p {
+//             text-align: center;
+//         }
+
+//         .center-msg {
+//             color: #FFFFFF;
+//             font-family: 'Poppins', sans-serif;
+//             font-size: 13px;
+//             font-weight: 800;
+//             font-style: normal;
+//             font-stretch: normal;
+//             line-height: normal;
+//             letter-spacing: normal;
+//         }
+
+//     }
+// }
+
+#slideshow {
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 40px;
+
+    @media screen and (max-width: $small-screen) {
+        width: 65%;
+        margin-top: 25px;
+    }
+
+    @media screen and (max-width: $small-mid-screen) {
+        width: 65%;
+        margin-top: 35px;
+    }
+
+    @media screen and (max-width: 360px) {
+        margin-top: 40px;
+    }
+
+    img {
+        margin: 0 auto;
+        display: block;
+        width: 70px;
+        height: 70px;
+
+        @media screen and (max-width: $large-screen) {
+            width: 58px;
+            height: 58px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: 42px;
+            height: 42px;
+        }
+    }
+
+    .row {
+        div {
+            cursor: pointer;
+            transition: all 0.7s ease-in-out;
+        }
+
+        div:hover {
+            transform: scale(1.08, 1.08);
+        }
+
+        p {
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 700;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #b74579;
+            margin-top: 20px;
+            text-align: center;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 13px;
+                font-weight: 900;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: 13px;
+                font-weight: 900;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 10px;
+                font-weight: 900;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .center-msg {
+        color: #FFFFFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+
+}
+}
+
+.slick-dots li.slick-active button:before {
+    color: #b74579;
+}
+
+.slick-dots li button:before {
+    color: #FFFFFF;
+    font-size: 10px;
+}
+
+.mobile-nav {
+
+    .close-icon {
+        font-size: 50px;
+        display: block;
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    z-index: 25;
+    display: none;
+    transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+
+    @media screen and (max-width: $medium-screen) {
+        height: 100vh;
+    }
+
+    @media screen and (max-width: $small-mid-screen) {
+        height: 85vh;
+    }
+
+    @media screen and (max-width: 388px) {
+        height: 82vh;
+    }
+
+    @media screen and (max-width: $smallest-screen) {
+        height: 82vh;
+    }
+
+    .list-wrap {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        height: 70vh;
+        margin-top: 80px;
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+            text-align: center;
+        }
+
+        ul li a {
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            margin-bottom: 35px;
+            margin-top: 35px;
+            display: block;
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #793b6f;
+    left: 0;
+    right: 0;
+    padding: 15px 50px;
+    z-index: 10;
+
+    @media screen and (max-width: $small-screen) {
+        padding: 10px 25px;
+    }
+
+    @media screen and (max-width: $smallest-screen) {
+        padding: 8px 15px;
+    }
+}
+
+nav {
+    transition: all 1s ease-in-out;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        .right {
+            float: right;
+            display: inline-block;
+            margin-top: 10px;
+
+            @media screen and (max-width: $medium-screen) {
+                display: none;
+            }
+        }
+
+        .right-mobile-reveal {
+            float: right;
+            display: none;
+            margin-top: 0px;
+
+            li a i {
+                font-size: 25px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                display: inline-block;
+            }
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+            a {
+                .tss-logo {
+                    width: 160px;
+
+                    @media screen and (max-width: $large-screen) {
+                        width: 150px;
+                    }
+
+                    @media screen and (max-width: $medium-screen) {
+                        width: 140px;
+                    }
+
+                    @media screen and (max-width: $small-screen) {
+                        width: 110px;
+                    }
+                }
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+        }
+
+        li.nav-text a {
+            display: inline-block;
+            text-align: right;
+            font-weight: 600;
+            font-style: normal;
+            font-family: Poppins;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 25px;
+            padding: 5px 15px;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 14.8px;
+            }
+        }
+
+        li.nav-text a:hover {
+            color: #b74579;
+        }
+    }
+}
+
+.what-we-offer {
+    padding: 140px 120px;
+    background-image: url(../images/website/about-bg.png);
+    width: 100vw;
+    background-size: cover;
+
+    @media screen and (max-width: $large-screen) {
+        padding: 80px 60px;
+    }
+
+    @media screen and (max-width: $medium-screen) {
+        padding: 70px 50px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        padding: 65px 30px;
+    }
+
+
+    .lead-p {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 200;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 1.23px;
+        color: #000000;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: 15.8px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 13px;
+        }
+    }
+
+    p {
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2;
+        letter-spacing: 1.23px;
+        color: #000000;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: $p-lg-size;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: $p-mid-size;
+        }        
+
+        @media screen and (max-width: $small-screen) {
+            font-size: $p-sm-size;
+        }
+    }
+
+    .title-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: $large-screen) {
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            margin-bottom: 12px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            margin-bottom: 10px;
+        }
+
+        .header-divider {
+            opacity: 0.5;
+            height: 4px;
+            background: #b74579;
+            width: 55px;
+            display: inline-block;
+            margin-right: 10px;
+
+            @media screen and (max-width: $medium-screen) {
+                width: 73px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                width: 70px;
+            }
+        }
+
+        h2 {
+            display: inline-block;
+            opacity: 0.5;
+            font-family: Mont-DEMO;
+            font-size: 32px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #b74579;
+            margin: 0;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: $header-lg-size;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: $header-mid-size;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: $header-sm-size;
+            }
+        }
+    }
+
+    .offer-first-images {
+        margin-left: 35px;
+
+        @media screen and (max-width: $large-screen) {
+            width: 90%;
+            margin-left: 0px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 300px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .col-lg-6 {
+            margin-bottom: 15px;
+
+            @media screen and (max-width: $medium-screen) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .col-12 {
+            margin-bottom: 10px;
+        }
+
+        .img-wrap {
+            img {
+                width: 21px;
+                background: transparent;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 19.5px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 18.5px;
+                }
+            }
+
+            small {
+                font-family: Mont-DEMO;
+                font-size: 15px;
+                font-weight: 200;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #333333;
+                margin-left: 8px;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 14.2px;
+                    font-family: Mont-DEMO-Light;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    font-size: 14px;
+                    font-family: Poppins;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 13.5px;
+                }
+            }
+        }
+    }
+
+    .buttons-wrap {
+        margin-top: 20px;
+
+        @media screen and (max-width: $large-screen) {
+            margin-top: 22px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            margin-bottom: 35px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            margin-bottom: 30px;
+        }
+
+        button {
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+            width: 240px;
+            height: 33px;
+            font-family: Poppins;
+            font-size: 14px;
+
+            @media screen and (max-width: $large-screen) {
+                width: 220px;
+                height: 31.5px;
+                font-size: 13.2px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                width: 215px;
+                height: 31px;
+                font-size: 13px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                width: 215px;
+                height: 30px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .who-bottom {
+        margin-top: 50px;
+        padding: 0;
+
+        @media screen and (max-width: $medium-screen) {
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 300px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .buttons-wrap {
+            @media screen and (max-width: 350px) {
+                margin-left: -5%;
+            }
+
+            padding: 0;
+        }
+
+        .col-lg-6 {
+            margin-bottom: 15px;
+
+            @media screen and (max-width: $medium-screen) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .col-12 {
+            margin-bottom: 15px;
+            width: 100%;
+            display: block;
+        }
+
+        .img-wrap {
+
+            img {
+                width: 23px;
+                background: transparent;
+
+                img {
+                    width: 20px;
+                    background: transparent;
+    
+                    @media screen and (max-width: $large-screen) {
+                        font-size: 19px;
+                    }
+    
+                    @media screen and (max-width: $small-screen) {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .last-img {
+                margin-top: -23%;
+
+                @media screen and (max-width: $large-screen) {
+                    margin-top: -13px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: -12px;
+                }
+            }
+
+            small {
+                display: inline-block;
+                width: 60px;
+                font-family: Mont-DEMO;
+                font-size: 15px;
+                font-weight: 200;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #333333;
+                margin-left: 8px;
+                text-align: left;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 14.2px;
+                    font-family: Mont-DEMO-Light;
+                }
+
+                @media screen and (max-width: 985px) {
+                    display: inline;
+                }
+
+                @media screen and (max-width: 985px) {
+                    display: inline;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    font-size: 14px;
+                    font-family: Poppins;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+button.btn {
+    margin-top: 10px;
+    background: #b74579;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal
+}
+
+.what-we-do {
+    position: relative;
+
+    .content {
+        text-align: center;
+        padding: 100px 120px;
+
+        @media screen and (max-width: $large-screen) {
+            padding: 80px 60px;
+        }
+    
+        @media screen and (max-width: $medium-screen) {
+            padding: 70px 50px;
+        }
+    
+        @media screen and (max-width: $small-screen) {
+            padding: 65px 30px;
+        }
+    }
+
+    .modal-up-2 {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 92%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: $large-screen) {
+            height: 100.6%;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            height: 100.3%;
+        }
+
+        @media screen and (max-width: 520px) {
+            height: 100%;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            height: 100.4%;
+        }
+
+        @media screen and (max-width: 425px) {
+            height: 95%;
+        }
+
+        @media screen and (max-width: 388px) {
+            height: 94%;
+        }
+
+        @media screen and (max-width: 360px) {
+            height: 92%;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            height: 90%;
+        }
+
+        .content {
+            height: 60%;
+            width: 100%;
+        }
+
+        .fa {
+            color: #cccccc;
+            font-size: 43px;
+            text-align: right;
+            margin-right: 4%;
+            cursor: pointer;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 42px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: 41px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 40px;
+            }
+        }
+
+        h2 {
+            font-family: Mont-DEMO;
+            font-size: 33px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 50px;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 29px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: 27px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 25px;
+            }
+        }
+
+        .row {
+            margin: 0 auto;
+            width: 80%;
+
+            @media screen and (max-width: $large-screen) {
+                width: 85%;
+                margin-top: 40px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                width: 90%;
+                margin-top: 40px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                width: 95%;
+                margin-top: 50px;
+            }
+
+            div {
+                cursor: pointer;
+            }
+
+            img {
+                width: 70px;
+                height: 70px;
+                display: block;
+                margin: 0 auto;
+
+                @media screen and (max-width: $large-screen) {
+                    width: 61.5px;
+                    height: 61.5px;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    width: 55px;
+                    height: 55px;
+                }
+                
+            }
+
+            p {
+                font-family: Poppins;
+                font-size: 15px;
+                font-weight: 800;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ffffff;
+                text-align: center;
+                margin-top: 20px;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 14.2px;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .modal-up-1 {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 92%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: $large-screen) {
+            height: 100.6%;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            height: 100.3%;
+        }
+
+        @media screen and (max-width: 520px) {
+            height: 100%;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            height: 100.4%;
+        }
+
+        @media screen and (max-width: 425px) {
+            height: 95%;
+        }
+
+        @media screen and (max-width: 388px) {
+            height: 94%;
+        }
+
+        @media screen and (max-width: 360px) {
+            height: 92%;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            height: 90%;
+        }
+
+        .content {
+            height: 60%;
+            width: 100%;
+        }
+
+        .fa {
+            color: #cccccc;
+            font-size: 43px;
+            text-align: right;
+            margin-right: 4%;
+            cursor: pointer;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 42px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: 41px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 40px;
+            }
+        }
+
+        h2 {
+            font-family: Mont-DEMO;
+            font-size: 33px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 50px;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 29px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: 27px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 25px;
+            }
+        }
+
+        .row {
+            margin: 0 auto;
+            width: 40%;
+
+            @media screen and (max-width: 520px) {
+                width: 90%;
+            }
+
+            div {
+                cursor: pointer;
+            }
+
+            img {
+                width: 85px;
+                height: 70px;
+                display: block;
+                margin: 0 auto;
+
+                @media screen and (max-width: $large-screen) {
+                    width: 59px;
+                    height: 59px;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    width: 57px;
+                    height: 57px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            p {
+                font-family: Poppins;
+                font-size: 15px;
+                font-weight: 800;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ffffff;
+                text-align: center;
+                margin-top: 20px;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 14.2px;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .title-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: $large-screen) {
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            margin-bottom: 12px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            margin-bottom: 10px;
+        }
+
+        .header-divider {
+            opacity: 0.5;
+            height: 4px;
+            background: #b74579;
+            width: 55px;
+            display: inline-block;
+        }
+
+        .left {
+            margin-right: 60px;
+
+            @media screen and (max-width: $large-screen) {
+                margin-right: 10px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                margin-right: 12px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                margin-right: 10px;
+            }
+        }
+
+        .right {
+            margin-left: 20px;
+
+            @media screen and (max-width: $large-screen) {
+                margin-left: 8px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                margin-left: 12px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                margin-left: 10px;
+            }
+        }
+
+        h2 {
+            opacity: 0.5;
+            font-family: Mont-DEMO;
+            font-size: 35px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal; 
+            color: #b74579;
+            margin: 0;
+            padding: 0;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: $header-lg-size;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: $header-mid-size;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: $header-sm-size;
+            }
+        }
+    }
+
+    p {
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.33;
+        letter-spacing: 1.23px;
+        color: #000000;
+        text-align: left;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: $p-lg-size;
+            font-family: Nunito;
+            line-height: 2;
+            letter-spacing: 1.23px;
+            font-weight: 300;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: $p-mid-size;
+            font-family: Nunito;
+            line-height: 2;
+            letter-spacing: 1.23px;
+            font-weight: 300;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: $p-sm-size;
+            font-family: Nunito;
+            line-height: 2;
+            letter-spacing: 1.23px;
+        }
+    }
+
+    .lead-p {
+        font-family: Poppins;
+        font-size: 18px;
+        width: 78%;
+        font-weight: 200;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 1.23px;
+        color: #000000;
+        text-align: center;
+        margin: 35px auto;
+        margin-top: 25px;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 13px;
+            font-weight: 500;
+        }
+    }
+
+    .action-buttons {
+        margin-top: 40px;
+        margin-bottom: 0;
+
+        @media screen and (max-width: $small-screen) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        @media screen and (max-width: 400px) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        button {
+            width: 250px;
+            height: 35px;
+            border-radius: 5px;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+
+            @media screen and (max-width: $large-screen) {
+                width: 230px;
+                height: 32px;
+                font-size: 13.5px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                width: 220px;
+                height: 31px;
+                font-size: 13px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                width: 220px;
+                height: 30px;
+                font-size: 12px;
+                display: block;
+            }
+        }
+
+        button:first-child {
+            margin-right: 50px;
+
+            @media screen and (max-width: $medium-screen) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.our-technology {
+    padding: 0px 120px;
+    padding-bottom: 30px;
+    text-align: center;
+
+    .stack-logo-mobile {
+        margin-top: -15px;
+
+        .stack-slider {
+            img {
+                width: 100px;
+                display: inline-block;
+                margin: 0 auto;
+            }
+        }
+        @media screen and (max-width: 990px) {
+            display: block;
+        }
+
+        @media screen and (min-width: 991px) {
+            display: none;
+        }
+    }
+
+    .stack-logo-desktop {
+        @media screen and (max-width: 990px) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $large-screen) {
+        padding: 3px 60px;
+        padding-bottom: 35px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        padding: 3px 30px;
+        padding-bottom: 50px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        padding: 0px 30px;
+        padding-bottom: 30px;
+    }
+
+    h5 {
+        font-family: Mont-DEMO;
+        font-size: 20px;
+        font-weight: 900;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 1.23px;
+        color: #333333;
+        margin-top: -15px;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: 17px;
+        }
+
+        @media screen and (max-width: 990px) {
+            display: none;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 14px;
+        }
+    }
+
+    .row {
+        margin-top: 25px;
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        .img-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            width: 110px;
+            background: none;
+            height: auto;
+            display: block;
+            align-self: center;
+
+            @media screen and (max-width: $large-screen) {
+                width: 90px;
+            }
+        }
+
+        .helm {
+            width: 70px;
+        }
+    }
+}
+
+/* WHO WE ARE */
+.who-we-are {
+    padding: 80px 120px;
+    background-color: #e5e6e8;
+
+    .who-mobile {
+
+        @media screen and (max-width: 990px) {
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        @media screen and (min-width: 991px) {
+            display: none;
+        }
+
+    }
+
+    .who-desktop {
+        @media screen and (max-width: 990px) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $large-screen) {
+        padding: 70px 60px;
+    }
+
+    @media screen and (max-width: $medium-screen) {
+        padding: 75px 50px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        padding: 70px 30px;
+    }
+
+    p {
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2;
+        letter-spacing: 1.23px;
+        color: #000000;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: $p-lg-size;
+            font-family: Nunito;
+            line-height: 2;
+            letter-spacing: 1.23px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: $p-mid-size;
+            font-family: Nunito;
+            line-height: 2;
+            letter-spacing: 1.23px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: $p-mid-size;
+            font-family: Nunito;
+            line-height: 2;
+            letter-spacing: 1.23px;
+        }
+    }
+
+    .title {
+        font-family: Poppins;
+        font-size: 16px;
+    }
+
+    .title-header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
+
+        .header-divider {
+            opacity: 0.5;
+            height: 4px;
+            background: #b74579;
+            width: 55px;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        h2 {
+            opacity: 0.5;
+            font-family: Mont-DEMO;
+            font-size: 32px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #b74579;
+            margin: 0;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: $header-lg-size;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: $header-mid-size;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .offer-first-images {
+        margin-left: 0px;
+
+        @media screen and (max-width: $medium-screen) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 300px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .col-lg-6 {
+            margin-bottom: 15px;
+        }
+
+        .col-12 {
+            margin-bottom: 10px;
+        }
+
+        .img-wrap {
+            img {
+                width: 21px;
+                background: transparent;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 19.5px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 18.5px;
+                }
+            }
+
+            small {
+                font-family: Mont-DEMO;
+                font-size: 15px;
+                font-weight: 200;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #333333;
+                margin-left: 8px;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 14.1px;
+                    font-family: Mont-DEMO-Light;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    font-size: 14px;
+                    font-family: Poppins;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    button.left {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        display: block;
+        width: 240px;
+        height: 33px;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ffffff;
+
+        @media screen and (max-width: $large-screen) {
+            width: 220px;
+            height: 32px;
+            font-size: 13.5px;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            width: 215px;
+            height: 31px;
+            font-size: 13px;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: 215px;
+            height: 30px;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .buttons-wrap {
+        margin-top: 20px;
+
+        button {
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+            width: 250px;
+            height: 33px;
+            font-size: 14px;
+
+            @media screen and (max-width: $large-screen) {
+                width: 220px;
+                height: 32px;
+                font-size: 13.5px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                width: 215px;
+                height: 31px;
+                font-size: 13px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                width: 215px;
+                height: 30px;
+                font-size: 12px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .who-bottom {
+        margin-top: 50px;
+
+
+        @media screen and (max-width: $medium-screen) {
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 300px) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .buttons-wrap {
+            @media screen and (max-width: 350px) {
+                margin-left: -5%;
+            }
+        }
+
+        .col-lg-6 {
+            margin-bottom: 15px;
+
+            @media screen and (max-width: $medium-screen) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .col-12 {
+            margin-bottom: 15px;
+        }
+
+
+        .img-wrap {
+
+            img {
+                width: 23px;
+                background: transparent;
+            }
+
+            .last-img {
+                margin-top: -23%;
+
+                @media screen and (max-width: $large-screen) {
+                    margin-top: -13px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: -12px;
+                }
+            }
+
+            small {
+                display: inline-block;
+                width: 60px;
+                font-family: Mont-DEMO;
+                font-size: 15px;
+                font-weight: 200;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #333333;
+                margin-left: 8px;
+                text-align: left;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 14.2px;
+                    font-family: Mont-DEMO-Light;
+                }
+
+                @media screen and (max-width: 985px) {
+                    display: inline;
+                }
+
+                @media screen and (max-width: 985px) {
+                    display: inline;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    font-size: 14px;
+                    font-family: Poppins;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 13.5px;
+                }
+            }
+        }
+    }
+}
+
+/* MAP START */
+.map-form {
+    width: 100%;
+    background-size: cover; 
+    height: 480px;
+    display: block !important;
+    margin-bottom: 0;
+
+    @media screen and (max-width: $small-screen) {
+        height: 465px;
+    }
+
+    .container {
+        h3 {
+            font-family: Mont-DEMO;
+            font-size: 20px;
+            font-weight: 900;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: 1.23px;
+            color: #333333;
+            text-align: left;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 17px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 14px;
+            }
+
+            @media screen and (max-width: $smallest-screen) {
+                font-size: 13px;
+            }
+        }
+
+        p {    
+            text-align: left;      
+            font-family: Mont-DEMO;
+            font-size: 12px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: 1.23px;
+            color: #000000;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 11.5px;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                font-size: 11px;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                font-size: 10px;
+            }
+
+            @media screen and (max-width: $smallest-screen) {
+                font-size: 9.5px;
+            }
+        }
+    }
+}
+
+.map-form iframe {
+    display: block !important;
+    position: absolute;
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(99%); /* Chrome 19+ & Safari 6+ */
+}
+.map-form .container {
+    min-width: 40%;
+    padding-top: 10px;
+    padding-bottom: 120px;
+    position: absolute;
+}
+
+.map-form form {
+    width: 450px;
+    background-color: #FFFFFF;
+    height: auto;
+    padding: 15px 50px;
+    display: block !important;
+    box-shadow: 0 8px 16px 0 #e0e2e4;
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    @media screen and (max-width: $small-screen) {
+        width: 90%;
+        // margin: 0 auto !important;  
+        right: 5%; 
+    }
+}
+
+.map-form h3 {
+    font-size: 25px;
+    padding-top: 20px;
+    font-family: OpenSansRegular;
+    text-align: center;
+}
+
+.map-form p {
+    font-family: OpenSansRegular;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.map-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border: solid 0.5px #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+
+    @media screen and (max-width: $large-screen) {
+        font-size: 13.5px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 13px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 12px;
+    }
+}
+
+.map-form input::placeholder {
+    opacity: 0.4;
+    font-family: Mont-DEMO;
+    font-size: 13px;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #6d7278;
+    padding-left: 5px;
+
+    @media screen and (max-width: $large-screen) {
+        font-size: 12.2px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 11px;
+    }
+}
+
+.map-form input:focus {
+    border: 2px solid black;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.24);
+}
+
+.map-form textarea {
+    height: 120px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border: solid 0.5px #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: OpenSansRegular;
+    resize: none;
+
+    @media screen and (max-width: $large-screen) {
+        font-size: 13.2px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 13px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 12px;
+    }
+}
+
+.map-form button {
+
+    @media screen and (max-width: $large-screen) {
+        font-size: 13.5px;
+    }
+
+    @media screen and (max-width: $medium-screen) {
+        font-size: 14px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 13px;
+    }
+
+    @media screen and (max-width: $smallest-screen) {
+        font-size: 12px;
+    }
+}
+
+.map-form textarea:focus {
+    border:2px solid black;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.24);
+}
+.map-form textarea::-moz-placeholder {
+    font-family: OpenSansRegular;
+}
+.map-form h4, .map-form p {
+    text-align: center;
+}
+.map-form h4 {
+    font-size: 20px;
+    color: #793b6f;
+}
+/* MAP END */
+
+/* OUR PROCESS */
+.our-process{
+    background-image: url(../images/website/engagement-bg.png); 
+    padding: 80px 120px; 
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (max-width: $large-screen) {
+        padding: 70px 60px; 
+    }
+
+    @media screen and (max-width: $medium-screen) {
+        padding: 70px 50px; 
+    }
+
+    @media screen and (max-width: $small-screen) {
+        padding: 50px 30px; 
+    }
+
+    .process-heading {
+        font-family: Poppins;
+        font-size: 17px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 1.23px;
+        color: #333333;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: 15.7px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: 15.5px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            font-size: 13.5px;
+        }
+    }
+
+        .process-wrap {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 40px;
+
+            @media screen and (max-width: $medium-screen) {
+                display: block;
+                height: auto;
+                margin-bottom: 0;
+            }
+            
+            @media screen and (max-width: $small-screen) {
+                display: block;
+                height: auto;
+                margin-bottom: 0;
+            }
+
+            .process:first-child {
+                margin-right: 40px;
+                width: 49%;
+
+                @media screen and (max-width: $medium-screen) {
+                    width: 100%;
+                    margin-right: 0;
+                }
+    
+                @media screen and (max-width: $small-screen) {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+
+            .plast5 {
+                margin: 0 25%;
+                width: 48%;
+
+                @media screen and (max-width: $medium-screen) {
+                    width: 100%;
+                    margin: 0;
+                }
+    
+                @media screen and (max-width: $small-screen) {
+                   width: 100%;
+                   margin: 0;
+                }
+            }
+
+            .process {
+                padding: 15px 20px;
+                width: 50%;
+                height: auto;
+
+                @media screen and (max-width: $large-screen) {
+                    padding: 13px 20px; 
+                    margin-bottom: 5px;
+                    height: 220px;
+                }
+    
+                @media screen and (max-width: 518px) {
+                    padding: 22px 20px; 
+                    width: 100%;
+                    margin-bottom: 17px;
+                    height: 220px;
+                }
+    
+                @media screen and (max-width: $medium-screen) {
+                    padding: 22px 27px; 
+                    width: 100%;
+                    margin-bottom: 17px;
+                    height: 225px;
+                }
+    
+                @media screen and (max-width: $small-screen) {
+                    padding: 20px 25px; 
+                    width: 100%;
+                    margin-bottom: 15px;
+                    height: 200px;
+                }
+    
+                @media screen and (max-width: $small-mid-screen) {
+                    padding: 20px 15px; 
+                    width: 100%;
+                    margin-bottom: 15px;
+                    height: 230px;
+                }
+    
+                @media screen and (max-width: $smallest-screen) {
+                    padding: 15px 15px; 
+                    width: 100%;
+                    margin-bottom: 15px;
+                    height: 210px;
+                }
+
+                .top {
+                    margin-bottom: 30px;
+                    height: 25%;
+
+                    // @media screen and (max-width: $small-screen) {
+                    //     margin-bottom: 15px;
+                    //     height: 20%; 
+                    // }
+    
+    
+                    @media screen and (max-width: $small-screen) {
+                        margin-bottom: 15px;
+                        height: 15%; 
+                    }
+
+                    @media screen and (max-width: $small-mid-screen) {
+                        margin-bottom: 15px;
+                        height: 15%; 
+                    }
+    
+                    @media screen and (max-width: $smallest-screen) {
+                        margin-bottom: 10px;
+                        height: 20%; 
+                    }
+
+                    .circle {
+                        background: #28263f;
+                        width: 70px;
+                        height: 70px;
+                        text-align: center;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 50px;
+                        float: left;
+
+                        @media screen and (max-width: $large-screen) {
+                            width: 55px;
+                            height: 55px; 
+                        }
+    
+                        @media screen and (max-width: $medium-screen) {
+                            width: 50px;
+                            height: 50px; 
+                        }
+    
+                        @media screen and (max-width: $small-screen) {
+                            width: 40px;
+                            height: 40px; 
+                        }
+    
+                        @media screen and (max-width: $smallest-screen) {
+                            width: 35px;
+                            height: 35px; 
+                        }
+
+                        h3 {
+                            margin-top: 10px;
+                            font-family: Nunito;
+                            font-size: 32px;
+                            font-weight: 900;
+                            font-stretch: normal;
+                            font-style: normal;
+                            line-height: 0.38;
+                            letter-spacing: 1.23px;
+                            color: #ffffff;
+
+                            @media screen and (max-width: $large-screen) {
+                                font-size: 25px; 
+                            }
+    
+                            @media screen and (max-width: $medium-screen) {
+                                font-size: 22px; 
+                            }
+    
+                            @media screen and (max-width: $small-screen) {
+                                font-size: 16px; 
+                            }
+    
+                            @media screen and (max-width: $smallest-screen) {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                    span.title {
+                        font-family: Poppins;
+                        font-size: 32px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.11;
+                        letter-spacing: 1.23px;
+                        text-align: right;
+                        color: #ffffff;
+                        display: inline-block;
+                        align-self: center;
+                        margin-top: 3%;
+                        width: 70%;
+                        display: inline-block;
+
+                        @media screen and (max-width: $large-screen) {
+                            font-size: 18px; 
+                            margin-top: 3%;
+                        }
+    
+                        @media screen and (max-width: $medium-screen) {
+                            font-size: 20px; 
+                            margin-top: 2.6%;
+                        }
+    
+                        @media screen and (max-width: $small-screen) {
+                            font-size: 16px; 
+                            margin-top: 2.8%;
+                        }
+    
+                        @media screen and (max-width: 386px) {
+                            font-size: 13.25px; 
+                            width: 80%;
+                            margin-top: -28px !important;
+                            display: inline-block;
+                            float: right;
+                        }
+    
+                        @media screen and (max-width: $smallest-screen) {
+                            font-size: 13px; 
+                            width: 80%;
+                            margin-top: -28px !important;
+                            display: inline-block;
+                            float: right;
+                        }
+                    }
+
+                }
+
+                p {
+                    font-family: Poppins;
+                    font-size: 13px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.29;
+                    letter-spacing: 1.23px;
+                    color: #ffffff;
+                    margin-top: 50px;
+
+                    @media screen and (max-width: $large-screen) {
+                        font-size: 12.9px; 
+                        margin-top: 35px;
+                        font-weight: 500;
+                    }
+    
+                    @media screen and (max-width: $medium-screen) {
+                        font-size: 12.8px; 
+                        margin-top: 42px;
+                        font-weight: 500;
+                    }
+    
+                    @media screen and (max-width: 520px) {
+                        font-size: 11.5px; 
+                        margin-top: 30px;
+                        font-weight: 500;
+                    }
+    
+                    @media screen and (max-width: $small-screen) {
+                        font-size: 11px; 
+                        margin-top: 25px;
+                        font-weight: 500;
+                    }
+    
+                    @media screen and (max-width: $smallest-screen) {
+                        font-size: 10.7px; 
+                        margin-top: 13px;
+                        font-weight: 500;
+                    }
+                }
+
+                height: 300px;
+                border-radius: 20px;
+                background-color: #b74579;
+            }
+        
+    }
+
+    .team-heading {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: 1.23px;
+        color: #000000;
+        text-align: right;
+        margin-bottom: 40px;
+        margin-top: 60px;
+        margin-right: 5px;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: 15.5px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 13px;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            font-size: 12.5px;
+            margin-right: 2px;
+            margin-top: 30px;
+        }
+    }
+
+    .staffs {
+        display: flex;
+
+        @media screen and (max-width: $large-screen) {
+            justify-content: center;;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            display: block;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            display: block;
+        }
+
+
+       .staff-wrapper {
+           
+           .staff-image {
+                border-radius: 5%;
+
+                @media screen and (max-width: $medium-screen) {
+                    width: 190px;
+                    margin: 0 auto;
+                    display: block;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    width: 170px;
+                    margin: 0 auto;
+                    display: block;
+                }
+
+                @media screen and (max-width: $smallest-screen) {
+                    width: 150px;
+                    margin: 0 auto;
+                    display: block;
+                }
+           }
+           .staff-name {
+                font-family: Mont-DEMO;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 900;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: 0.4px;
+                color: #000000;
+                padding-bottom: 0;
+                margin-bottom: 0;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 13px;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 13px;
+                }
+
+                @media screen and (max-width: $smallest-screen) {
+                    font-size: 12.5px;
+                }
+           }
+           .staff-role {
+                font-family: Mont-DEMO-Light;
+                font-size: 15px;
+                font-weight: 0;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: 0.4px;
+                color: #000000;
+                text-align: center;
+                margin-top: 3px;
+
+                @media screen and (max-width: $large-screen) {
+                    font-size: 10px;
+                }
+
+                @media screen and (max-width: $medium-screen) {
+                    font-size: 11px;
+                }
+
+                @media screen and (max-width: $small-screen) {
+                    font-size: 10.5px;
+                }
+
+                @media screen and (max-width: $smallest-screen) {
+                    font-size: 10px;
+                }
+           }
+       } 
+    }
+}
+
+/* FOOTER */
+.footer {
+    // margin-top: ;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    padding-left: 120px;
+    padding-right: 120px;
+    background-image: url(../images/website/footer.png); 
+    background-size: cover;
+
+    @media screen and (max-width: $large-screen) {
+        padding: 20px 60px; 
+        padding-top: 70px;
+    }
+
+    @media screen and (max-width: $medium-screen) {
+        padding: 15px 50px; 
+        padding-top: 90px;
+    }
+
+    @media screen and (max-width: $small-screen) {
+        padding: 10px 30px; 
+        padding-top: 90px;
+    }
+
+    .wrap-img-text {
+        width: 230px;
+
+        img {
+            width: 160px;
+            display: block;
+        }
+
+        p {
+            // float: right;
+            text-align: left;
+            display: block;
+            width: 180px;
+            font-family: Poppins;
+            font-size: 9px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2.2;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            padding: 0;
+            margin: 0;
+            margin-top: 2px;
+            margin-left: 1.5px;
+        }
+
+    }
+
+    .down {
+        margin-top: 75px;
+
+        @media screen and (max-width: $medium-screen) {
+            margin-top: 0;
+        }
+    }
+
+    .copy-right {
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: #ffffff;
+        font-size: 11.5px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.83;
+        letter-spacing: 2.54px;
+        margin-top: 80px;
+
+        @media screen and (max-width: $large-screen) {
+            margin-top: 90px;
+            font-size: 10.2px;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            margin-top: 130px;
+            font-size: 9px;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            margin-top: 150px;
+            font-size: 8.5px;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            margin-top: 100px;
+            font-size: 8.5px;
+        }
+    }
+
+    .footer-header {
+        font-family: Poppins;
+        font-size: 17px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.1;
+        letter-spacing: 4px;
+        color: #ffffff;
+        text-align: right;
+
+        @media screen and (max-width: $large-screen) {
+            font-size: 14.5px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: $medium-screen) {
+            font-size: 15px;
+            text-align: left;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: $small-screen) {
+            font-size: 13px;
+            text-align: left;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            font-size: 12px;
+            text-align: left;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+    }
+
+    .footer-links {
+        margin-top: 15px;
+        padding: 0;        
+
+        .footer-link {
+            padding: 0;
+            margin: 0;
+            text-align: right;
+
+            @media screen and (max-width: $medium-screen) {
+                text-align: left;
+            }
+        }
+
+        .footer-link a {
+            font-family: Poppins;
+            font-size: 12.5px;
+            font-weight: 503;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.38;
+            letter-spacing: 3px;
+            color: #ffffff;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+
+            @media screen and (max-width: $large-screen) {
+                font-size: 11.3px;
+                font-weight: 400;
+            }
+
+            @media screen and (max-width: $medium-screen) {
+                text-align: left;
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            @media screen and (max-width: $small-screen) {
+                text-align: left;
+                font-size: 11px;
+                font-weight: 400;
+            }
+
+            @media screen and (max-width: $smallest-screen) {
+                text-align: left;
+                font-size: 10.7px;
+                font-weight: 400;
+            }
+        }
+
+        .footer-link a.social {
+            font-family: Nunito;
+        }
+    }
+}
+
+.roundBtn {
+    background: #793b6f;
+    float: right;
+    padding: 5px 10px;
+    width: 100px;
+}
+
+.modal-content {
+    padding: 15px 30px;
+
+    @media screen and (max-width: 380px) {
+        padding: 15px 18px;
+    }
+
+    @media screen and (max-width: $smallest-screen) {
+        padding: 15px 15px;
+    }
+
+    .modal-title {
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000000;
+
+        @media screen and (max-width: 350px) {
+            font-size: 13.2px;
+        }
+
+        @media screen and (max-width: $smallest-screen) {
+            font-size: 12.6px;
+        }
+    
+        img {
+            width: 45px;
+            height: 45px;
+            margin-right: 20px;
+
+            @media screen and (max-width: $small-screen) {
+                width: 38px;
+                height: 38px;
+            }
+
+            @media screen and (max-width: $smallest-screen) {
+                width: 35px;
+                height: 35px;
+                margin-right: 15px;
+            }
+        }
+    }
+    
+    .modal-body {
+        p {
+            font-family: Poppins;
+            font-size: 11px;
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+            color: #000000;
+        }
+
+        p:nth-child(3) {
+            margin-bottom: -0.1%;
+        }
+
+        form {
+            input {
+                height: 29px;
+                border-radius: 4px;
+                border: solid 0.5px #6d7278;
+                margin-bottom: 15px;
+                font-size: 11px;
+            }
+
+            textarea {
+                border-radius: 4px;
+                border: solid 0.5px #6d7278;
+                margin-bottom: 15px;
+                height: 135px;
+                font-size: 11px;
+            }
+
+            button {
+                width: 232px;
+                height: 32px;
+                font-family: Poppins;
+                font-size: 13px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #ffffff;
+                display: block;
+                float: right;
+                margin-top: 30px;
+            }
+
+            input::placeholder, textarea::placeholder {
+                opacity: 0.4;
+                font-family: Poppins;
+                font-size: 10px;
+                font-weight: 300;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #6d7278;
+            }
+        }
+    }
+}
+
+#tssvideo {
+    margin-top: 50px;
+    width: 100%;
+    display: none;
+}
